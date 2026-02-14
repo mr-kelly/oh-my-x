@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="oh-my-x: The First Prize winning demo project at OpenClaw HK 2026 (Feb 14, 2026). A revolutionary social media management tool designed for automation and efficiency.">
+    <meta name="keywords" content="oh-my-x, OpenClaw HK, OpenClaw HK 2026, First Prize Winner, Demo Project, Social Media Automation, BrowserDrone, GeoDrone, SEO Tools">
+    <meta name="author" content="oh-my-x Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oh-my-x.app/">
+    <meta property="og:title" content="oh-my-x - OpenClaw HK 2026 First Prize Winner">
+    <meta property="og:description" content="Check out oh-my-x, the First Prize winning demo project from the OpenClaw HK 2026 event. Revolutionizing social media management.">
+    <meta property="og:image" content="images/image-1771045436060.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://oh-my-x.app/">
+    <meta property="twitter:title" content="oh-my-x - OpenClaw HK 2026 First Prize Winner">
+    <meta property="twitter:description" content="Check out oh-my-x, the First Prize winning demo project from the OpenClaw HK 2026 event. Revolutionizing social media management.">
+    <meta property="twitter:image" content="images/image-1771045436060.png">
+
+    <title>oh-my-x - OpenClaw HK 2026 First Prize Winner</title>
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "oh-my-x",
+      "description": "Social media management tool demo project, winner of the First Prize at OpenClaw HK 2026.",
+      "applicationCategory": "Social Media Tool",
+      "award": "First Prize at OpenClaw HK 2026",
+      "datePublished": "2026-02-14",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Demo version is free"
+      }
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-bg: #0a0a12;
+            --secondary-bg: #151520;
+            --accent-color: #6c5ce7;
+            --accent-gradient: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            --text-color: #ffffff;
+            --text-secondary: #b2bec3;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 60px 0;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1a2e 0%, var(--primary-bg) 70%);
+        }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(108, 92, 231, 0.5));
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 10px 0;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .badge {
+            background: var(--accent-gradient);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        section.darker {
+            background-color: var(--secondary-bg);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-gradient);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .demo-image-container {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 900px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            border: 1px solid #333;
+        }
+
+        .demo-image-container img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Pricing Section */
+        .pricing-container {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        .pricing-note {
+            color: #fd79a8;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        /* Related Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .project-card {
+            background-color: #1e1e2d;
+            border-radius: 15px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 1px solid #333;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+            border-color: var(--accent-color);
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #a29bfe;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-icon {
+            margin-right: 10px;
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .project-url {
+            display: block;
+            margin-top: 15px;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+
+        .event-info {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <img src="images/image-1771045321337.png" alt="oh-my-x Logo" class="logo">
+            <div class="badge">🏆 OpenClaw HK First Prize Winner</div>
+            <h1>oh-my-x</h1>
+            <p class="subtitle">The Award-Winning Social Media Management Demo</p>
+            <p class="event-info">OpenClaw HK &bull; February 14, 2026</p>
+        </div>
+    </header>
+
+    <section id="demo">
+        <div class="container">
+            <h2>See the Winner in Action</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: var(--text-secondary);">
+                Experience the demo that secured the First Prize at OpenClaw HK 2026.
+            </p>
+            <div class="demo-image-container">
+                <img src="images/image-1771045436060.png" alt="oh-my-x Dashboard Demo showing social media analytics">
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="darker">
+        <div class="container">
+            <h2>Pricing Plan</h2>
+            <div class="pricing-container">
+                <img src="images/image-1771045450938.png" alt="oh-my-x Pricing Plan Mockup - $99/month" class="pricing-image">
+                <p class="pricing-note">* Just kidding! This was a demo feature for the competition.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Related Projects</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 40px;">
+                Explore our suite of automation tools developed alongside oh-my-x.
+            </p>
+
+            <div class="projects-grid">
+                <a href="https://geodrone.app" target="_blank" class="project-card">
+                    <div class="project-title">
+                        <span class="project-icon">🌍</span> GeoDrone
+                    </div>
+                    <p class="project-description">
+                        Automated insights for SEO & GEO traffic analysis. Monitors GA and GSC to generate keywords and reports automatically.
+                    </p>
+                    <span class="project-url">geodrone.app</span>
+                </a>
+
+                <a href="https://browserdrone.app" target="_blank" class="project-card">
+                    <div class="project-title">
+                        <span class="project-icon">🤖</span> BrowserDrone
+                    </div>
+                    <p class="project-description">
+                        Advanced social media management tool. The production-ready counterpart to the oh-my-x demo.
+                    </p>
+                    <span class="project-url">browserdrone.app</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 oh-my-x Team. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #444;">Proud winner of OpenClaw HK 2026</p>
+        </div>
+    </footer>
+
+</body>
+</html>
