@@ -55,86 +55,93 @@
 
     <style>
         :root {
-            --primary-bg: #0a0a12;
-            --secondary-bg: #151520;
+            --primary-bg: #ffffff;
+            --secondary-bg: #f9f9f9;
             --accent-color: #ff4757;
             --accent-gradient: linear-gradient(135deg, #ff4757, #ff6b81);
-            --text-color: #ffffff;
-            --text-secondary: #dcdde1;
+            --text-color: #2d3436;
+            --text-secondary: #636e72;
+            --card-bg: #ffffff;
+            --border-color: #eaeaea;
+            --shadow-light: 0 10px 30px rgba(0,0,0,0.05);
+            --shadow-hover: 0 20px 50px rgba(255, 71, 87, 0.15);
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--primary-bg);
             color: var(--text-color);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 40px;
         }
 
         /* Header */
         header {
-            padding: 100px 0 80px; /* More breathing room */
+            padding: 120px 0 100px;
             text-align: center;
-            background: radial-gradient(circle at top center, #1e1e2f 0%, var(--primary-bg) 80%);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background-color: var(--primary-bg);
+            /* Minimalist background pattern */
+            background-image: radial-gradient(#f1f2f6 1px, transparent 1px);
+            background-size: 40px 40px;
         }
 
         .logo {
-            max-width: 140px;
+            max-width: 160px;
             height: auto;
-            margin-bottom: 30px;
-            border-radius: 24px; /* Make it look like an app icon */
-            box-shadow: 0 10px 30px rgba(255, 71, 87, 0.3); /* Red glow matches theme */
-            transition: transform 0.3s ease;
+            margin-bottom: 40px;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .logo:hover {
-            transform: scale(1.05) rotate(2deg);
+            transform: scale(1.05);
         }
 
         h1 {
-            font-size: 4rem; /* Larger title */
-            font-weight: 800;
-            margin: 20px 0 15px;
-            letter-spacing: -1px;
+            font-size: 5rem;
+            font-weight: 900;
+            margin: 20px 0;
+            letter-spacing: -2px;
+            line-height: 1.1;
             background: var(--accent-gradient);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 10px 30px rgba(255, 71, 87, 0.3);
+            /* Subtle drop shadow for depth on white */
+            filter: drop-shadow(0 10px 20px rgba(255, 71, 87, 0.2));
         }
 
         .subtitle {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             color: var(--text-secondary);
-            margin-bottom: 50px;
-            font-weight: 300;
+            margin-bottom: 60px;
+            font-weight: 400;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .badge {
-            background: var(--accent-gradient);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 25px;
+            background: rgba(255, 71, 87, 0.08);
+            color: var(--accent-color);
+            padding: 10px 25px;
+            border-radius: 50px;
             font-size: 1rem;
-            font-weight: bold;
+            font-weight: 700;
             display: inline-block;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 71, 87, 0.2);
         }
 
         /* Sections */
         section {
-            padding: 80px 0;
+            padding: 120px 0;
         }
 
         section.darker {
@@ -142,30 +149,28 @@
         }
 
         h2 {
-            font-size: 2.2rem;
+            font-size: 3rem;
             text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--accent-gradient);
-            margin: 15px auto 0;
-            border-radius: 2px;
+            margin-bottom: 80px;
+            font-weight: 800;
+            color: var(--text-color);
+            letter-spacing: -1px;
         }
 
         .demo-image-container {
             text-align: center;
             margin: 0 auto;
-            max-width: 900px;
-            border-radius: 12px;
+            max-width: 1000px;
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-            border: 1px solid #333;
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .demo-image-container:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
         }
 
         .demo-image-container img {
@@ -176,29 +181,31 @@
         /* Pricing Section */
         .pricing-container {
             text-align: center;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .pricing-image {
             width: 100%;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            border-radius: 24px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow-light);
+            border: 1px solid #fff;
         }
 
         .pricing-note {
-            color: #ff6b81;
+            color: var(--accent-color);
             font-size: 1.2rem;
-            font-style: italic;
+            font-weight: 600;
+            opacity: 0.9;
         }
 
         /* Related Projects */
         .projects-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 40px;
+            margin-top: 60px;
         }
 
         @media (min-width: 768px) {
@@ -208,64 +215,96 @@
         }
 
         .project-card {
-            background-color: #1e1e2d;
-            border-radius: 15px;
-            padding: 30px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            border: 1px solid #333;
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            padding: 50px 40px;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid var(--border-color);
             text-decoration: none;
             color: inherit;
-            display: block;
+            display: flex;
+            flex-direction: column;
             height: 100%;
             box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
         }
 
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 71, 87, 0.2);
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
             border-color: var(--accent-color);
         }
 
         .project-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #ff6b81;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--text-color);
             display: flex;
             align-items: center;
         }
 
         .project-icon {
-            margin-right: 10px;
+            margin-right: 15px;
+            font-size: 2rem;
         }
 
         .project-description {
             color: var(--text-secondary);
-            font-size: 1rem;
+            font-size: 1.1rem;
+            flex-grow: 1;
+            margin-bottom: 30px;
         }
 
         .project-url {
-            display: block;
-            margin-top: 15px;
+            display: inline-block;
+            margin-top: auto;
             color: var(--accent-color);
-            font-size: 0.9rem;
+            font-size: 1rem;
+            font-weight: 700;
+            position: relative;
+        }
+
+        .project-url::after {
+            content: '→';
+            margin-left: 8px;
+            transition: margin-left 0.2s ease;
+        }
+
+        .project-card:hover .project-url::after {
+            margin-left: 12px;
         }
 
         .event-info {
             text-align: center;
-            margin-bottom: 40px;
+            margin-top: 30px;
+            margin-bottom: 0;
             color: var(--text-secondary);
-            font-size: 1.1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            opacity: 0.7;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 40px 0;
-            color: #666;
-            font-size: 0.9rem;
-            border-top: 1px solid #222;
-            margin-top: 60px;
+            padding: 100px 0;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            border-top: 1px solid var(--border-color);
+            background-color: var(--primary-bg);
+            margin-top: 0;
+        }
+
+        footer a {
+            transition: color 0.2s ease;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -284,9 +323,6 @@
     <section id="demo">
         <div class="container">
             <h2>See the Winner in Action</h2>
-            <p style="text-align: center; margin-bottom: 30px; color: var(--text-secondary);">
-                Experience the demo that secured the First Prize at OpenClaw HK 2026.
-            </p>
             <div class="demo-image-container">
                 <img src="images/image-1771045436060.png" alt="oh-my-x Dashboard Demo showing social media analytics">
             </div>
@@ -306,10 +342,6 @@
     <section id="projects">
         <div class="container">
             <h2>Related Projects</h2>
-            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 40px;">
-                Explore our suite of automation tools developed alongside oh-my-x.
-            </p>
-
             <div class="projects-grid">
                 <a href="https://geodrone.app" target="_blank" class="project-card">
                     <div class="project-title">
@@ -340,7 +372,7 @@
             <p style="margin-top: 15px;">
                 Contact: <a href="https://x.com/kellypeinlinchan" target="_blank" style="color: var(--accent-color); text-decoration: none; font-weight: bold;">@kellypeinlinchan</a>
             </p>
-            <p style="font-size: 0.8rem; margin-top: 10px; color: #444;">Proud winner of OpenClaw HK 2026</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Proud winner of OpenClaw HK 2026</p>
         </div>
     </footer>
 
