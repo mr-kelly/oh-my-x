@@ -107,7 +107,7 @@
         h1 {
             font-size: 5rem;
             font-weight: 900;
-            margin: 20px 0;
+            margin: 10px 0; /* Reduced top margin */
             letter-spacing: -2px;
             line-height: 1.1;
             background: var(--accent-gradient);
@@ -120,7 +120,7 @@
         .subtitle {
             font-size: 1.8rem;
             color: var(--text-secondary);
-            margin-bottom: 60px;
+            margin-bottom: 40px; /* Adjusted margin */
             font-weight: 400;
             max-width: 700px;
             margin-left: auto;
@@ -135,8 +135,9 @@
             font-size: 1rem;
             font-weight: 700;
             display: inline-block;
-            margin-bottom: 25px;
+            margin-bottom: 30px; /* Increased margin to separate from logo */
             border: 1px solid rgba(255, 71, 87, 0.2);
+            order: -1; /* Move badge above logo if needed, or remove this line */
         }
 
         /* Sections */
@@ -311,9 +312,9 @@
 <body>
 
     <header>
-        <div class="container">
-            <img src="images/image-1771045321337.png" alt="oh-my-x Logo" class="logo">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center;">
             <div class="badge">🏆 OpenClaw HK First Prize Winner</div>
+            <img src="images/image-1771045321337.png" alt="oh-my-x Logo" class="logo">
             <h1>oh-my-x</h1>
             <p class="subtitle">The Award-Winning Social Media Management Demo</p>
             <p class="event-info">OpenClaw HK &bull; February 13, 2026</p>
